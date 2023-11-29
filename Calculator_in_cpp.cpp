@@ -1,10 +1,8 @@
 #include <iostream>
 
-using namespace std;
-
 double addition(double a, double b) {
 	return a + b;
-}	
+}
 
 double subtraction(double a, double b) {
 	return a - b;
@@ -18,58 +16,51 @@ double division(double a, double b) {
 	return a / b;
 }
 
-int main() {
+using namespace std;
+
+int main(){
 	int response;
 	double n1, n2;
-
-	cout << "[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n\nResponse: ";
+	
+	cout << "[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\nResponse: ";
 	cin >> response;
 
 	if (response == 1){
-	cout << "\nWrite one number: ";
-	cin >> n1;
+		cout << "Write one number: ";
+		cin >> n1;
+		
+		cout << "Write one number: ";
+		cin >> n2;
 
-	cout << "\nWrite one number: ";
-	cin >> n2;
-
-	double formula_addition = addition(n1, n2);
-
-	cout << "\n" << n1 << " + " << n2 << " = " << formula_addition;
+		cout << '\n' << n1 << " + " << n2 << " = " << addition(n1, n2);
 	}
 	else if (response == 2) {
-		cout << "\nWrite one number: ";
+		cout << "Write one number: ";
 		cin >> n1;
 
-		cout << "\nWrite one number: ";
+		cout << "Write one number: ";
 		cin >> n2;
 
-		double formula_subtraction = subtraction(n1, n2);
-
-		cout << "\n" << n1 << " - " << n2 << " = " << formula_subtraction;
+		cout << '\n' << n1 << " - " << n2 << " = " << subtraction(n1, n2);
 	}
 	else if (response == 3) {
-		cout << "\nWrite one number: ";
+		cout << "Write one number: ";
 		cin >> n1;
-
-		cout << "\nWrite one number: ";
+		
+		cout << "Write one number: ";
 		cin >> n2;
 
-		double formula_multiplication = multiplication(n1, n2);
-
-		cout << "\n" << n1 << " x " << n2 << " = " << formula_multiplication;
+		cout << '\n' << n1 << " x " << n2 << " = " << multiplication(n1, n2);
 	}
 	else if (response == 4) {
-		cout << "\nWrite one number: ";
+		cout << "Write one number: ";
 		cin >> n1;
 
-		cout << "\nWrite one number: ";
+		cout << "Write one number: ";
 		cin >> n2;
 
-		double formula_division = n1 / n2;
-
-		cout << "\n" <<  n1 << " / " << n2 << " = " << formula_division;
+		cout << '\n' << n1 << " : " << n2 << " = " << division(n1, n2) << "\n\n\n\n\n\n";
 	}
-	cout << "\n\n\n";
-	system("PAUSE");
+
 	return 0;
 }
